@@ -1,0 +1,1 @@
+window.sideEffects = true;
