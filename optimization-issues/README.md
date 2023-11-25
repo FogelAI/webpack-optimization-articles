@@ -602,7 +602,7 @@ _[webpack.config.js](examples/5-babel-plugin/webpack.config.js)_
         loader: require.resolve("babel-loader"),
         options: {
           presets: [["@babel/preset-react"]],
-+         plugins: [["transform-barrels"]],
++         plugins: [["transform-barrels", { webpackConfigFilename: __filename, ...(typeof module.exports === "function" && { args: arguments })}]],
         },
       },
 ```
